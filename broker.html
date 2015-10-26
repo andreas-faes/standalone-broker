@@ -4,13 +4,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 	<script src="standalone.js"></script>
   </head>
-  <body>
+  <body ng-controller="StandaloneBroker as standalone">
     <div>
-	  <button>Start</button>
-	  <button>Stop</button>
+	  <button ng-click="standalone.start()">Start</button>
+	  <button ng-click="standalone.stop()">Stop</button>
 	  <! -- if broker not started, display text box. Once started, display status box. -->
-	  <input type="text" value="3000" >
-	  <div ng-controller="StandaloneBroker as standalone">
+	  Broker port: <input type="text" value="3000" >
+	  <div>
       <span>Broker status: {{standalone.status()}}</span>
 	  </div>
     </div>
