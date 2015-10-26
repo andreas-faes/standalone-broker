@@ -1,0 +1,88 @@
+C:\jruby-1.7.6\bin\jruby.exe --1.9 -e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) C:\jruby-1.7.6\bin/rspec C:/Users/andreasf/Documents/Silvio_Samplenet_Trl/spec/standalone_trl_spec.rb --require teamcity/spec/runner/formatter/teamcity/formatter --format Spec::Runner::Formatter::TeamcityFormatter --example "Standalone trnd [Work orders]"
+Testing started at 16:43 ...
+Running tests for centralink version local on cl db ...
+log4j:WARN No appenders could be found for logger (be.mips.communication.internal.message.util.InternalMessageConverter).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+ERROR: #<StandaloneTranslator:0x6068ebb2> > Constructor with inconsistent interface settings (-s & external interface defined).
+INFO: #<StandaloneTranslator:0x6068ebb2> > Starting standalone translator with following properties:
+INFO: #<StandaloneTranslator:0x6068ebb2> > Name: trnd (path: C:\temp\trnd.exe)
+INFO: #<StandaloneTranslator:0x6068ebb2> > Generic options: -S 3000 -D 3 -L C:\temp\trnd\trnd_standalone.log
+INFO: #<StandaloneTranslator:0x6068ebb2> > Specific translator options: -q -x AUT_Trinidad1 -s 9999
+INFO: #<StandaloneTranslator:0x6068ebb2> > Broker setup: CENTRALINK (CENTRALINK v.15.0.4)
+DEBUG: #<BrokerListener:0x1ed9d173> > initialized
+DEBUG: #<BrokerListener:0x1ed9d173> > connected
+DEBUG: #<BrokerListener:0x1ed9d173> > channel opened --> be.mips.communication.endpoint.Channel@58a47825
+DEBUG: IN: #<BrokerListener:0x1ed9d173> > received message from channel 1487173669
+DEBUG: IN: #<BrokerListener:0x1ed9d173> > Source=trnd&Class=Translator&Version=1.0.0&Method=(Mnemonic=Register&ParameterList=(Resource=TRNDS_Translator&Version=1.0.0&Name=trnd&Pid=26036&ApplicationInterface=(Type=Network&Parameters=(Host=192.168.1.78&Port=60412&TimeOut=150))))
+DEBUG: #<BrokerListener:0x1ed9d173> setting interface for 192.168.1.78:60412
+DEBUG: OUT: #<BrokerListener:0x1ed9d173> > Source=CENTRALINK&Class=Translator&Version=1.0.0&Application=(Name=CENTRALINK&Version=15.0.4&Identifier=2457253648368&User=(Identifier=SYSTEM@127.0.0.1))&User=(Name=batch&Language=(Name=English))&Target=trnd&EventTime=20151026164404&Method=(Mnemonic=Accept&ParameterList=)
+DEBUG: be.mips.communication.internal.Message@606e9a2a converting message to URL format (with prefix)
+DEBUG: #<Broker:0x59bba6e1> > building interface message
+DEBUG: OUT: #<Broker:0x59bba6e1> > Source=CENTRALINK&Class=Translator&Version=1.0.0&Application=(Name=CENTRALINK&Version=15.0.4&Identifier=2457253648368&User=(Identifier=SYSTEM@127.0.0.1))&User=(Name=batch&Language=(Name=English))&Target=trnd&EventTime=20151026164404&Method=(Mnemonic=Interface&ParameterList=(CenturyBorder=1950))
+DEBUG: #<BrokerListener:0x660d26fe> > initialized
+DEBUG: #<BrokerListener:0x660d26fe> > connected
+DEBUG: be.mips.communication.internal.Message@562d0f3d converting message to URL format (with prefix)
+DEBUG: #<BrokerListener:0x660d26fe> > channel opened --> be.mips.communication.endpoint.Channel@31a29f93
+DEBUG: IN: #<BrokerListener:0x660d26fe> > received message from channel 832741267
+DEBUG: IN: #<BrokerListener:0x660d26fe> > Source=trnd&Class=Translator&Version=1.0.0&Method=(Mnemonic=Accept&ParameterList=(Version=1.0.0))
+channel opened
+DEBUG: IN: #<BrokerListener:0x1ed9d173> > received message from channel 1487173669
+DEBUG: IN: #<BrokerListener:0x1ed9d173> > Source=trnd&Class=Translator&Version=1.0.0&Method=(Mnemonic=Connected)
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Standalone trnd [Work orders] should handle a query gracefully
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+.
+DEBUG: OUT: #<BrokerListener:0x1ed9d173> > Source=CENTRALINK&Class=Translator&Version=1.0.0&Application=(Name=CENTRALINK&Version=15.0.4&Identifier=2457253648368&User=(Identifier=SYSTEM@127.0.0.1))&User=(Name=batch&Language=(Name=English))&Target=trnd&EventTime=20151026164404&Method=(Mnemonic=Accept&ParameterList=)
+DEBUG: be.mips.communication.internal.Message@20e3a1cc converting message to URL format (with prefix)
+OUT: <ENQ>
+IN:  <ACK>
+OUT: <STX>1H|\^&|||TRND_INSTR|||||CENTRALINK||P|LIS2-A2|20151026164404<CR>Q|1|^AUT20151026164404555_1||||||||||O<CR>L|1|N<CR><ETX>4E<CR><LF><EOT>
+IN:  <ACK>
+DEBUG: IN: #<BrokerListener:0x1ed9d173> > received message from channel 1487173669
+))
+INFO: Broker in:
+INFO: H|\^&|||||||trnd
+INFO: Q|1|^AUT20151026164404555_1|ONEORDER|||||||||O||ObjectComment\OrderDescription\OrderQuestion\OrderReportInfo\EncounterData
+INFO: L|1|N
+INFO: Broker out:
+INFO: H|\^&|||||||CENTRALINK
+INFO: P|1|PI20151026164404549|||Pulliam^Iris^Ben||19960708|F||||||Human|||||||||||URG
+INFO: O|1|AUT20151026164404555_1||^^^AFP|R||20151026093025||^^7 ml tube||N|||||JB
+INFO: L|1|N
+DEBUG: be.mips.communication.internal.Message@57993e2b converting message to URL format (with prefix)
+IN:  <ENQ>
+OUT: <ACK>
+IN:  <STX>1H|\^&||||||||||P|1<CR>P|1|PI20151026164404549|||Pulliam^Iris^Ben||19960708|F|||||JB|Human|||||||||||URG<CR>O|1|AUT20151026164404555_1||^^^AFP|R||20151026093025||||N|||||||||||||AUT_Trinidad1<CR>L|1|F<CR><ETX>D0<CR><LF>
+OUT: <ACK>
+IN:  <EOT>
+Test result: passed
+channel closed
+DEBUG: #<Broker:0x59bba6e1> > stopping the translator by sending STOP message
+DEBUG: OUT: #<Broker:0x59bba6e1> > Source=CENTRALINK&Class=Translator&Version=1.0.0&Application=(Name=CENTRALINK&Version=15.0.4&Identifier=2457253648368&User=(Identifier=SYSTEM@127.0.0.1))&User=(Name=batch&Language=(Name=English))&Target=trnd&EventTime=20151026164407&Method=(Mnemonic=Stop&ParameterList=)
+DEBUG: #<BrokerListener:0x95cecc5> > initialized
+DEBUG: #<BrokerListener:0x95cecc5> > connected
+DEBUG: be.mips.communication.internal.Message@603d25db converting message to URL format (with prefix)
+DEBUG: #<BrokerListener:0x95cecc5> > channel opened --> be.mips.communication.endpoint.Channel@b86cb18
+DEBUG: #<Broker:0x59bba6e1> > disconnecting incoming socket
+DEBUG: #<BrokerListener:0x1ed9d173> > channel opened --> be.mips.communication.endpoint.Channel@175e877a
+DEBUG: IN: #<BrokerListener:0x95cecc5> > received message from channel 193383192
+DEBUG: IN: #<BrokerListener:0x95cecc5> > Source=trnd&Class=Translator&Version=1.0.0&Method=(Mnemonic=Accept&ParameterList=(Version=1.0.0))
+DEBUG: #<BrokerListener:0x1ed9d173> > channel closed --> be.mips.communication.endpoint.Channel@58a47825
+DEBUG: #<BrokerListener:0x1ed9d173> > channel closed --> be.mips.communication.endpoint.Channel@58a47825
+DEBUG: #<BrokerListener:0x95cecc5> > channel closed --> be.mips.communication.endpoint.Channel@b86cb18
+DEBUG: #<BrokerListener:0x1ed9d173> > channel closed --> be.mips.communication.endpoint.Channel@175e877a
+DEBUG: #<BrokerListener:0x1ed9d173> > disconnected
+DEBUG: #<Broker:0x59bba6e1> > disconnecting outgoing socket
+DEBUG: #<Broker:0x59bba6e1> > disconnected
+DEBUG: LIS > nothing to disconnect
+DEBUG: #<BrokerListener:0x660d26fe> > channel closed --> be.mips.communication.endpoint.Channel@31a29f93
+
+1 example, 0 failures, 1 passed
+
+Finished in 3.763 seconds
+Picked up JAVA_TOOL_OPTIONS: -agentlib:jvmhook
+Picked up _JAVA_OPTIONS: -Xrunjvmhook -Xbootclasspath/a:"C:\Program Files (x86)\HP\Unified Functional Testing\bin\java_shared\classes";"C:\Program Files (x86)\HP\Unified Functional Testing\bin\java_shared\classes\jasmine.jar"
+Picked up JAVA_TOOL_OPTIONS: -agentlib:jvmhook
+
+Process finished with exit code 0
