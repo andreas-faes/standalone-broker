@@ -6,12 +6,13 @@
   </head>
   <body ng-controller="StandaloneBroker as standalone">
     <div>
-	  <button ng-click="standalone.start()">Start</button>
-	  <button ng-click="standalone.stop()">Stop</button>
+	  <button id="start" ng-click="standalone.start()">Start</button>
+	  <button id="stop" ng-click="standalone.stop()">Stop</button>
 	  <! -- if broker not started, display text box. Once started, display status box. -->
 	  Broker port: <input type="text" value="3000" >
-	  <div>
-      <span>Broker status: {{standalone.status()}}</span>
+	  <br>
+	  <div id="log">
+		<p ng-repeat="log in standalone.logs"><span>{{log.text}}</span></p>
 	  </div>
     </div>
   </body>
