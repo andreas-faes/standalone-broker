@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app='standalone'>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="standalone.js"></script>
+  </head>
+  <body>
+    <div>
+	  <button>Start</button>
+	  <button>Stop</button>
+	  <! -- if broker not started, display text box. Once started, display status box. -->
+	  <input type="text" value="3000" >
+	  <div ng-controller="StandaloneBroker as standalone">
+      <span>Broker status: {{standalone.status()}}</span>
+	  </div>
+    </div>
+  </body>
+</html>
